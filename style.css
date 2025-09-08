@@ -1,0 +1,28 @@
+.header {
+  background-color: pink; 
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 20%;
+}
+
+footer {
+  background: grey;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 20px;
+  padding: 2px 20px;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.logo {
+    background-image: url(/Images/6.jpeg);
+    background-size: 100%;
+    background-position: center;
+    height: 550px;
+    width: 50%;
+}
+
