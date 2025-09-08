@@ -97,6 +97,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   text-align: center;
+  box-shadow: 0 0px 20px 10px rgba(0, 0, 0, .50)
 }
 
 .footerImage {
@@ -104,13 +105,16 @@ footer {
   margin: 0px 0px 0px 0px
 }
 
+/* HOME PAGE */
 
 .MainPicture {
-    background-image: url(/Images/6.jpeg);
-    background-size: 100%;
     display: flex;
-    height: 800px;
-    width: 70%;
-    
+    justify-content: center;
+    align-items: center;
 }
 
+.MainPicture img {
+  max-width: 100%; /* responsive scaling */
+  height: auto;
+  padding: 30px;
+}
