@@ -82,6 +82,10 @@ html {
   color: black;
 }
 
+#navbar li a:hover {
+  color: white;
+}
+
 .logo {
   width: 400px;
 }
@@ -117,4 +121,12 @@ footer {
   max-width: 100%; /* responsive scaling */
   height: auto;
   padding: 30px;
+}
+
+.WhatsAppLink {
+  color: grey;
+}
+
+.WhatsAppLink:hover {
+  color: white;
 }
