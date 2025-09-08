@@ -32,7 +32,7 @@ h6 {
 }
 
 p {
-  font-size: 16px;
+  font-size: 20px;
   color: grey;
   margin: 15px 0 20px 0;
 }
@@ -59,9 +59,31 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 80px;
+  padding: 20px 40px;
   background: pink;
   box-shadow: 0 5px 15px rgba(0, 0, 0, .50)
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#navbar li {
+  list-style: none;
+  padding: 0 20px;
+}
+
+#navbar li a {
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 500;
+  color: black;
+}
+
+.logo {
+  width: 400px;
 }
 
 /* FOOTER */ 
@@ -71,7 +93,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   font-size: 20px;
-  padding: 2px 20px;
+  padding: 10px 40px;
   justify-content: space-between;
   align-items: center;
   text-align: center;
