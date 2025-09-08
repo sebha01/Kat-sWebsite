@@ -7,8 +7,16 @@
   padding: 25px 20%;
 }
 
+.logo {
+    background-image: url(/Images/6.jpeg);
+    background-size: 100%;
+    background-position: center;
+    height: 550px;
+    width: 50%;
+}
+
 footer {
-  background: grey;
+  background: pink;
   display: flex;
   flex-wrap: wrap;
   font-size: 20px;
@@ -18,11 +26,8 @@ footer {
   text-align: center;
 }
 
-.logo {
-    background-image: url(/Images/6.jpeg);
-    background-size: 100%;
-    background-position: center;
-    height: 550px;
-    width: 50%;
+.footerImage {
+  height: 20px;
+  margin: 0px 0px 0px 0px
 }
 
