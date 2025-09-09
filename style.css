@@ -73,6 +73,7 @@ html {
 #navbar li {
   list-style: none;
   padding: 0 20px;
+  position: relative;
 }
 
 #navbar li a {
@@ -80,10 +81,23 @@ html {
   font-size: 24px;
   font-weight: 500;
   color: black;
+  transition: 0.3s ease;
 }
 
-#navbar li a:hover {
+#navbar li a:hover,
+#navbar li a.active {
   color: white;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after{
+  content: "";
+  width: 35%;
+  height: 2px;
+  background: white;
+  position: absolute;
+  bottom: -2px;
+  left: 20px;
 }
 
 .logo {
@@ -120,7 +134,7 @@ footer {
 .MainPicture img {
   max-width: 100%; /* responsive scaling */
   height: auto;
-  padding: 30px;
+  padding: 40px;
 }
 
 .WhatsAppLink {
