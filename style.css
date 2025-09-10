@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
-
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +6,10 @@
   font-family: 'Satisfy', cursive;
 }
 
-/* Global Styles */
+/* GLOBAL STYLES */
+/*------------------------------------------------------------------------------*/
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*------------------------------------------------------------------------------*/
 
 h1 {
   font-size: 50px;
@@ -52,7 +54,20 @@ html {
   scroll-behavior: smooth;
 }
 
+/*------------------------------------------------------------------------------*/
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
 /* HEADER */
+/*------------------------------------------------------------------------------*/
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*------------------------------------------------------------------------------*/
 
 #header {
   display: flex;
@@ -65,6 +80,16 @@ html {
   position: sticky;
   top: 0;
   left: 0;
+}
+
+/* Hide dropdown menu on desktop */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: black;
 }
 
 #navbar {
@@ -103,11 +128,73 @@ html {
   left: 20px;
 }
 
-.logo {
-  width: 400px;
+/* Make nav-container the positioning context so that drop down shows by the button */
+.nav-container {
+  position: relative;
 }
 
+/* Media queries for mobile, shows the dropdown button and doesn't clutter the nav bar with the text */
+@media (max-width: 1023px) {
+  #navbar {
+    display: none; 
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;          
+    background: pink;
+    width: 200px;     
+    border-radius: 10px;
+    padding: 10px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    text-align: center;
+    z-index: 1000;
+  }
+
+  #navbar li {
+    padding: 10px;
+    text-align: center;
+  }
+
+  #navbar.active {
+    display: flex; /* show when toggled */
+  }
+
+  .nav-toggle {
+    display: block; /* show hamburger */
+  }
+}
+
+.logo {
+  width: auto;
+  max-width: 480px;
+  height: auto;
+}
+
+@media (max-width: 767px) {
+  .logo {
+    max-width: 200px; /* shrink logo on mobile */
+  }
+}
+/*------------------------------------------------------------------------------*/
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* FOOTER */ 
+/*------------------------------------------------------------------------------*/
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*------------------------------------------------------------------------------*/
 
 footer {
   background: pink;
@@ -128,18 +215,6 @@ footer {
 
 /* HOME PAGE */
 
-.MainPicture {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.MainPicture img {
-  max-width: 100%; /* responsive scaling */
-  height: auto;
-  padding: 40px;
-}
-
 .WhatsAppLink {
   color: grey;
 }
@@ -148,18 +223,81 @@ footer {
   color: white;
 }
 
-/*Put a media query on this for view height*/
-#hero{
-  background-image: url("Images/6.jpeg");
-  height: 90vh;
-  width: 100%;
-  background-size: cover;
-  background-position: top 0% right 0% left 0%;
-  padding:  0 80px;
+/*------------------------------------------------------------------------------*/
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+/* HERO SECTION */
+/*------------------------------------------------------------------------------*/
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*------------------------------------------------------------------------------*/
+
+#hero {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: center;
+  height: 80vh;
+  width: 100%;
+  padding: 0 80px;
+  background: white; /* soft pink → white */
+  box-sizing: border-box;
+}
+
+/* Left Text Content */
+#hero .hero-text {
+  flex: 1;
+  max-width: 50%;
+}
+
+#hero p {
+  max-width: 90%;
+  line-height: 1.5;
+  color: grey;
+}
+
+/* Right Image */
+#hero .hero-img {
+  flex: 1;
+  display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+#hero .hero-img img {
+  height: 90%;   /* fills hero height */
+  width: auto;   /* keeps aspect ratio */
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  #hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    height: auto;
+  }
+
+  #hero .hero-text {
+    max-width: 100%;
+  }
+
+  #hero .hero-img img {
+    height: auto;
+    width: 80%;
+    margin-top: 20px;
+  }
 }
 
 #hero h4 {
@@ -213,4 +351,24 @@ footer {
 .boton-elegante:hover {
   border-color: #666666;
   background: #292929;
+}
+/*------------------------------------------------------------------------------*/
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*------------------------------------------------------------------------------*/
+
+
+
+
+
+/*FEATURE SECTION*/
+/*------------------------------------------------------------------------------*/
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*------------------------------------------------------------------------------*/
+
+#card {
+  width: 190px;
+  height: 254px;
+  border-radius: 30px;
+  background: lightgrey;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
 }

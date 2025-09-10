@@ -1,0 +1,2 @@
+- Apply index.html nav bar to rest of the pages
+- Review Footer layout and apply to all pages
