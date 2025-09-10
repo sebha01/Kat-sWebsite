@@ -365,10 +365,29 @@ footer {
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 /*------------------------------------------------------------------------------*/
 
+#feature {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 #card {
   width: 190px;
   height: 254px;
   border-radius: 30px;
-  background: lightgrey;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+  background: pink;
+  box-shadow: rgba(18, 15, 18, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+}
+
+#card:hover {
+  box-shadow: 
+    rgba(187, 95, 190, 0.985) 0px 60px 100px -24px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+}
+
+.featureBox {
+  width: 180px;
+  text-align: center;
+  padding: 25px 15px;
 }
